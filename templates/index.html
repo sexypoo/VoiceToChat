@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/index.css">
+    <title>고은아 힘내!</title>
+</head>
+<body>
+        <div class="title">
+            <h2>Chat with bot!</h2>
+        </div>
+        <div class="wrap">    
+            <form action="/recording",method="get">
+                <input class="button" type="submit" value="Record">    
+                <div class="chating" id="user">{{user}}</div>
+                {% for line in bot %}
+                {% if line != '' %}
+                <div class="chating" id="bot">{{line}}</div>
+                {% endif %}
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/static/index.js"></script>
+</html>
